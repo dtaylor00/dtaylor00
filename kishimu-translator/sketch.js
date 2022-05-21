@@ -1,15 +1,12 @@
 console.log('Hello world!');
 
-const form = document.querySelector('form');
-let content = '';
-
 const width = 800;
 const height = 800;
 const xOff = -50;
 const yOff = 20;
-
 const lineWidth = 2;
 
+let words = [];
 let lettersCommands = {
     "a": "m -11 -14;c 5 2 10 7 11 14;c 1 -7 5 -13 11 -14;m -11 14",
     "b": "m 0 0;c 0.15 12.22 0.92 38.36 -15.88 38.36;c -9.26 0 -9.26 -13.23 0 -13.23;c 9.26 0 15.88 19.84 31.75 19.84;c 9.26 0 10.58 -11.91 -1.32 -11.91;c -13.23 0 -14.56 28.27 -14.55 39.7",
@@ -41,15 +38,13 @@ let lettersCommands = {
     "space": "m 0 32"
 };
 
-let sentence = '';
-let words = [];
-let letters = [];
 
 function setup() {
+    let form = document.querySelector('form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const formData = new FormData(form);
-        content = formData.get('translate-sentence');
+        let content = formData.get('translate-sentence');
         if (content) {
             console.log(content);
             setWords(content);
@@ -141,7 +136,6 @@ function drawCharacter(ch, loc) {
 }
 
 function setWords(sentence) {
-    letters = [];
     sentence = sentence.toLowerCase();
     console.log(sentence);
     let rawWords = sentence.split(' ');
