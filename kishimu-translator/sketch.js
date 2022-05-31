@@ -243,3 +243,12 @@ function relativeBezierToAbsolute(prevPoint, currPoint) {
 function relativePointToAbsolute(prevPoint, currPoint) {
     return new Point(prevPoint.x + currPoint.x, prevPoint.y + currPoint.y);
 }
+
+function toggleInfo() {
+    let info = document.querySelector('#info-block');
+    if (info.classList.contains('hidden')) {
+        info.classList.remove('hidden');
+    } else {
+        info.classList.add('hidden');
+    }
+}

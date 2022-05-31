@@ -14,11 +14,22 @@
         <form>
             <label for="translate-sentence">English to script</label>
             <input type="text" name="translate-sentence" id="translate-sentence">
-            <button>Translate</button>
+            <button>Convert</button>
         </form>
-        <a href="">What is this?</a>
-        <div class="hidden">
-            <p>aaa</p>
+        <a href="#" onclick="toggleInfo()">What is this?</a>
+        <div id="info-block" class="hidden">
+            <span>This is a project to convert a Latin-script sentence (abcd...) to a Kishimu-script sentence. The
+                Kishimu-script is an alternative writing system for a fantasy species known as Kishimus and was created
+                by Paradoxum. Check out more of her work and art here: </span><a
+                href="https://www.instagram.com/paradoxum_art/">https://www.instagram.com/paradoxum_art/</a><span>. The
+                Kishimu script uses an alphasyllabary (or abugida) system whereas the Latin script uses an alphabet
+                system. Alphasyllabary is similar to an alphabet, but its vowels are not full standalone symbols.
+                Instead, the vowels must be appended or attached to a consonant. The Kishimu script has two more main
+                differences compared to Latin script. The first, words in a sentence are written without break (similar
+                to cursive). The second, sentences are read from top to bottom and right to left. The script and example
+                is below:
+            </span><br>
+            <img src="./kishimu_script_info.png" alt="" width="800px">
         </div>
         <script src="sketch.js"></script>
     </div>
