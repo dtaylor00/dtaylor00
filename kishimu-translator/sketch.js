@@ -1,7 +1,7 @@
 console.log('Hello world!');
 
 const width = 800;
-const height = 800;
+const height = 600;
 const xOff = -50;
 const yOff = 20;
 const lineWidth = 2;
